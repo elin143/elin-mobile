@@ -12,16 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeonghyeonApps">
         <activity
-            android:name=".pertemuan3.ThirdResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan3.ThirdActivity"
+            android:name=".pertemuan4.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".pertemuan4.FourthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan3.ThirdActivity"
+            android:exported="false">
+
         </activity>
         <activity
             android:name=".pertermuan_2.SecondActivity"
