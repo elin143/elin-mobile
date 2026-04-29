@@ -15,13 +15,13 @@
             android:name="Home.HomeFragment"
             android:exported="false" />
         <activity
-            android:name=".BaseActivity"
+            android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name="Home.pertemuan_7.SeventhActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
