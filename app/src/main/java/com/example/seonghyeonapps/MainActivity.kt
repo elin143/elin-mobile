@@ -9,8 +9,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.seonghyeonapps.databinding.ActivityMain2Binding
 import com.example.seonghyeonapps.databinding.ActivityMainBinding
+import com.example.seonghyeonapps.pertemuan3.ThirdActivity
 import com.example.seonghyeonapps.pertemuan4.FourthActivity
+import com.example.seonghyeonapps.pertemuan_7.SeventhActivity
+import com.example.seonghyeonapps.pertermuan_2.SecondActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import pertemuan_5.activity_fifth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -49,6 +53,26 @@ class MainActivity : AppCompatActivity() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+        }
+        binding.btn2.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btn3.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btn4.setOnClickListener {
+            val intent = Intent(this, FourthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btn5.setOnClickListener {
+            val intent = Intent(this, activity_fifth::class.java)
+            startActivity(intent)
+        }
+        binding.btn7.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
         }
     }
 }
