@@ -7,12 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.seonghyeonapps.databinding.ActivityMain2Binding
 import com.example.seonghyeonapps.databinding.ActivityMainBinding
-import com.example.seonghyeonapps.pertemuan3.ThirdActivity
-import com.example.seonghyeonapps.pertemuan4.FourthActivity
-import com.example.seonghyeonapps.pertemuan_7.SeventhActivity
-import com.example.seonghyeonapps.pertermuan_2.SecondActivity
+import Home.pertemuan3.ThirdActivity
+import Home.pertemuan4.FourthActivity
+import Home.pertemuan_7.SeventhActivity
+import Home.pertermuan_2.SecondActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import pertemuan_5.activity_fifth
 

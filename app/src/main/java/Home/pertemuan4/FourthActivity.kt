@@ -1,4 +1,4 @@
-package com.example.seonghyeonapps.pertemuan4
+package Home.pertemuan4
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.seonghyeonapps.R
 import com.example.seonghyeonapps.databinding.ActivityFourthBinding
-import com.example.seonghyeonapps.databinding.ActivityMain2Binding
-import com.example.seonghyeonapps.pertemuan3.ThirdResultActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

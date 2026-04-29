@@ -1,4 +1,4 @@
-package com.example.seonghyeonapps.pertermuan_2
+package Home.pertermuan_2
 
 import android.os.Bundle
 import android.util.Log

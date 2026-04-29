@@ -1,4 +1,4 @@
-package com.example.seonghyeonapps.pertemuan_7
+package Home.pertemuan_7
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.seonghyeonapps.databinding.ActivitySeventhBinding
 import com.example.seonghyeonapps.R
+import kotlin.math.abs
 
 
 class SeventhActivity : AppCompatActivity() {
@@ -43,7 +44,7 @@ class SeventhActivity : AppCompatActivity() {
                 binding.appBar.elevation = 80f
             }
 
-            if (kotlin.math.abs(verticalOffset) == appBarLayout.totalScrollRange) {
+            if (abs(verticalOffset) == appBarLayout.totalScrollRange) {
                 supportActionBar?.subtitle = null
             } else {
                 supportActionBar?.subtitle = "Ini adalah subtitle"

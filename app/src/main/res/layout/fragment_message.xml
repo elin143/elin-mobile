@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8CD8F6"
-    tools:context="Home.pertemuan_7.SatuFragment">
+    tools:context="Message.MessageFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="30sp"
-        android:text="halo, seonghyeon fragment 1"
-        android:textStyle="bold" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
