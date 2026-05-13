@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeonghyeonApps">
         <activity
+            android:name="Home.pertermuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name="Home.HomeFragment"
             android:exported="false" />
         <activity

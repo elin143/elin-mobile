@@ -4,6 +4,7 @@ import Home.pertemuan3.ThirdActivity
 import Home.pertemuan4.FourthActivity
 import Home.pertemuan_7.SeventhActivity
 import Home.pertermuan_2.SecondActivity
+import Home.pertermuan_9.NinthActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -23,10 +24,14 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_home, container, false)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -56,6 +61,10 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
             startActivity(intent)
         }
+        binding.btn9.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnlogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi")
@@ -67,7 +76,7 @@ class HomeFragment : Fragment() {
                     editor.clear()
                     editor.apply()
 
-                    val intent = Intent(requireContext()    , AuthActivity::class.java)
+                    val intent = Intent(requireContext(), AuthActivity::class.java)
 
                     requireActivity().finish()
                 }
