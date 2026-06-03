@@ -1,11 +1,13 @@
 package Home
 
+import Data.Model.PhotoApiClient
 import Home.pertemuan3.ThirdActivity
 import Home.pertemuan4.FourthActivity
 import Home.pertemuan_10.TenthActivity
 import Home.pertemuan_7.SeventhActivity
 import Home.pertermuan_2.SecondActivity
 import Home.pertermuan_9.NinthActivity
+import Home.photo.PhotoAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -13,11 +15,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.seonghyeonapps.AuthActivity
 import com.example.seonghyeonapps.R
 import com.example.seonghyeonapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 import pertemuan_5.activity_fifth
 
 class HomeFragment : Fragment() {
@@ -90,6 +96,29 @@ class HomeFragment : Fragment() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+        }
+        loadPhoto()
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+
+                /** List Tampil Vertical*/
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+
+                /** List Tampil Horizontal */
+                //binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+                /** List Tampil Grid */
+                //binding.rvGallery.layoutManager = GridLayoutManager(requireContext(),2)
+
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
