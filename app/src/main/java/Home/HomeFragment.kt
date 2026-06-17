@@ -4,6 +4,7 @@ import Data.Model.PhotoApiClient
 import Home.pertemuan3.ThirdActivity
 import Home.pertemuan4.FourthActivity
 import Home.pertemuan_10.TenthActivity
+import Home.pertemuan_13.ThirteenthActivity
 import Home.pertemuan_7.SeventhActivity
 import Home.pertermuan_2.SecondActivity
 import Home.pertermuan_9.NinthActivity
@@ -74,6 +75,10 @@ class HomeFragment : Fragment() {
         }
         binding.btn10.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btn13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
         binding.btnlogout.setOnClickListener {
